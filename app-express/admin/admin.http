@@ -1,0 +1,33 @@
+###get users
+GET http://localhost:5000/api/admin/all-users
+Content-Type: application/json
+access_token: b03b3791f05b0f525f97d3101722f014790d34cb
+refresh_token:nanananannaananan
+
+###add a role to a user
+POST http://localhost:5000/api/admin/add-role
+Content-Type: application/json
+access_token: b03b3791f05b0f525f97d3101722f014790d34cb
+refresh_token:nanananannaananan
+
+{
+    "userId":"61c4def5ae3a59fc73b84d66",
+    "roleName":"user"
+}
+
+###remove a role from a user
+POST http://localhost:5000/api/admin/remove-role
+Content-Type: application/json
+access_token: b03b3791f05b0f525f97d3101722f014790d34cb
+refresh_token:nanananannaananan
+
+{
+    "userId":"61c4def5ae3a59fc73b84d66",
+    "roleName":"user"
+}
+
+###delete a user
+DELETE http://localhost:5000/api/admin/user/47482969-1d8c-4f31-8cd8-edee5dcbd27a
+Content-Type: application/json
+access_token: b03b3791f05b0f525f97d3101722f014790d34cb
+refresh_token:nanananannaananan

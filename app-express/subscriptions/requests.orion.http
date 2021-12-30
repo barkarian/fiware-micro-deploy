@@ -1,0 +1,60 @@
+###get specific orion entities **
+GET http://localhost:1026/v2/entities?type=type_id
+
+###get entity by id **
+GET http://localhost:1026/v2/entities/entity_id?options=keyValues
+
+###get atts of entity by id **
+GET http://localhost:1026/v2/entities/entity_id/attrs?options=keyValues
+
+###delete  an entity
+DELETE http://localhost:1026/v2/entities/entity_id?type=type_id
+
+###create new entity
+POST http://localhost:1026/v2/entities?options=keyValues
+Content-Type: application/json
+
+{
+    "id": "concertId",
+    "type": "ConcertSubInfos",
+    "startTickets":{
+        "value":"hello1",
+        "type":"String"
+    },
+    "stopTickets":{
+        "value":"world1",
+        "type":"String"
+    },
+    "soldOut":{
+        "value":false,
+        "type":"Boolean"
+    }
+}
+
+###update some atts from an entity
+PUT http://localhost:1026/v2/entities/concertId/attrs/startTickets
+Content-Type: application/json
+
+{
+    "value":{"value":"hello111","type":"String"}
+}
+
+###update some atts from an entity v2
+POST http://localhost:1026/v2/entities/concertId/attrs
+Content-Type: application/json
+
+{
+    "startTickets":{"value":"heaalloi","type":"String"},
+    "stopTickets":{"value":"hello111","type":"String"},
+    "soldOut":{"value":true,"type":"Boolean"}
+}
+
+###get all orion entities **
+GET http://localhost:1026/v2/entities?options=keyValues
+
+###get subscriptions
+GET http://localhost:1026/v2/subscriptions
+
+###delete orion entities **
+DELETE http://localhost:1026/v2/entities/61c085d860fd2ddf37769868
+

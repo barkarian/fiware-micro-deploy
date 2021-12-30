@@ -1,0 +1,71 @@
+###login a user
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email123@gmail.com","password":"password123"}
+
+###create one event
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: a13481982682c775ff475de7f5231bbc07b0f256
+refresh_token: nanananana
+
+{
+    "title": "title1",
+    "date": "date1",
+    "artistName": "artistName1",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "category1"
+}
+
+
+###add concert infos
+POST http://localhost:5000/api/subscriptions/create-new-entity
+Content-Type: application/json
+access_token: a13481982682c775ff475de7f5231bbc07b0f256
+
+{
+    "eventId":"61c0b63107c7dc0fb2ce1bd7",
+    "startTickets":"11/2/2021",
+    "stopTickets":"11/3/2021",
+    "soldOut":false
+}
+
+# ###update concert infos
+# PUT http://localhost:5000/api/subscriptions/update-entity
+# Content-Type: application/json
+# access_token: a13481982682c775ff475de7f5231bbc07b0f256
+
+# {
+#     "eventId":"61c0a787e9ef5bc16194af6a",
+#     "changes":{
+#         "startTickets":{"value":"heaalloi","type":"String"},
+#         "stopTickets":{"value":"hello111","type":"String"},
+#         "soldOut":{"value":true,"type":"Boolean"}
+#         }
+# }
+
+###update concert infos
+PUT http://localhost:5000/api/subscriptions/update-entity
+Content-Type: application/json
+access_token: a13481982682c775ff475de7f5231bbc07b0f256
+
+{
+    "eventId":"61c0ae2c975bfa611aa5ad0a",
+    "changes":{
+        "startTickets":"heaalloi",
+        "stopTickets":"hello111",
+        "soldOut":true
+        }
+}
+
+
+
+
+###get all orion entities **
+GET http://localhost:1026/v2/entities?options=keyValues
+
+###get subscriptions
+GET http://localhost:1026/v2/subscriptions

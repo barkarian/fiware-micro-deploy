@@ -1,0 +1,78 @@
+###create new subscription start-tickets
+POST http://localhost:1026/v2/subscriptions
+Content-Type: application/json
+
+{
+  "description": "Notify users when some concert details are changed.",
+  "subject": {
+    "entities": [{"idPattern": ".*","type": "ConcertSubInfos"}],
+    "condition": {
+      "attrs": [ "startTickets"]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://localhost:5000/subscription/start-tickets"
+    },
+    "attrs":[
+        "startTickets"
+    ]
+  }
+}
+
+###create new subscription stopTickets
+POST http://localhost:1026/v2/subscriptions
+Content-Type: application/json
+
+{
+  "description": "Notify users when some concert details are changed.",
+  "subject": {
+    "entities": [{"idPattern": ".*","type": "ConcertSubInfos"}],
+    "condition": {
+      "attrs": [ "stopTickets"]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://localhost:5000/subscription/stop-tickets"
+    },
+    "attrs":[
+        "startTickets"
+    ]
+  }
+}
+
+###create new subscription start-tickets
+POST http://localhost:1026/v2/subscriptions
+Content-Type: application/json
+
+{
+  "description": "Notify users when some concert details are changed.",
+  "subject": {
+    "entities": [{"idPattern": ".*","type": "ConcertSubInfos"}],
+    "condition": {
+      "attrs": [ "soldOut"]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://localhost:5000/subscription/sold-out"
+    },
+    "attrs":[
+        "soldOut"
+    ]
+  }
+}
+
+
+###get subscriptions
+GET http://localhost:1026/v2/subscriptions
+
+###delete subscriptions
+DELETE http://localhost:1026/v2/subscriptions/61bf8245bbbcca197716f00c
+
+###delete subscriptions
+DELETE http://localhost:1026/v2/subscriptions/61bf8245bbbcca197716f00d
+
+###delete subscriptions
+DELETE http://localhost:1026/v2/subscriptions/61bf8245bbbcca197716f00e

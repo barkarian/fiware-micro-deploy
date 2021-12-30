@@ -1,0 +1,213 @@
+###create the app-admin
+POST http://localhost:5000/auth/create-user
+Content-Type: application/json
+
+{"name":"appAdmin","surname":"appAdminSur","username":"appAdmin","email":"app-admin@gmail.com","password":"password123"}
+
+###create user 1
+POST http://localhost:5000/auth/create-user
+Content-Type: application/json
+
+{"name":"name1","surname":"surname1","username":"username1","email":"email1@gmail.com","password":"password123"}
+
+###create user 2
+POST http://localhost:5000/auth/create-user
+Content-Type: application/json
+
+{"name":"name2","surname":"surname2","username":"username2","email":"email2@gmail.com","password":"password123"}
+
+###create user 3
+POST http://localhost:5000/auth/create-user
+Content-Type: application/json
+
+{"name":"name3","surname":"surname3","username":"username3","email":"email3@gmail.com","password":"password123"}
+
+###login as admin
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"app-admin@gmail.com","password":"password123"}
+
+###get all users
+GET http://localhost:5000/api/admin/all-users
+Content-Type: application/json
+access_token: ec93eb3cc1aad9a5110934f16edef571dddd5f49
+refresh_token:nanananannaananan
+
+###Admin gives user1 eventOrganizer permissions
+POST http://localhost:5000/api/admin/add-role
+Content-Type: application/json
+access_token: ec93eb3cc1aad9a5110934f16edef571dddd5f49
+refresh_token:nanananannaananan
+
+{
+    "userId":"61c72ff061183fb4e0a0ed9a",
+    "roleName":"eventOrganizer"
+}
+
+###Admin gives user2 eventOrganizer permissions
+POST http://localhost:5000/api/admin/add-role
+Content-Type: application/json
+access_token: ec93eb3cc1aad9a5110934f16edef571dddd5f49
+refresh_token:nanananannaananan
+
+{
+    "userId":"61c72ffe61183fb4e0a0ed9d",
+    "roleName":"eventOrganizer"
+}
+
+###login as user1
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email1@gmail.com","password":"password123"}
+
+###user1 creates event:metallica-event1
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: bee95607fad8378674e72e00c2bece01e42b870f
+refresh_token: nanananana
+
+{
+    "title": "metallica-event1",
+    "date": "date1",
+    "artistName": "metallica",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "metal"
+}
+
+###user1 creates event:metallica-event2
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: bee95607fad8378674e72e00c2bece01e42b870f
+refresh_token: nanananana
+
+{
+    "title": "metallica-event2",
+    "date": "date2",
+    "artistName": "metallica",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "metal"
+}
+
+###user1 creates event:meta-event3-llica
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: bee95607fad8378674e72e00c2bece01e42b870f
+refresh_token: nanananana
+
+{
+    "title": "meta-event3-llica",
+    "date": "date2",
+    "artistName": "metallica",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "metal"
+}
+
+###login as user2
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email2@gmail.com","password":"password123"}
+
+###user2 creates event:scorpions-event1
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: 556d40507ec9ce3ec0e9aed5fab98cb06293a6ed
+refresh_token: nanananana
+
+{
+    "title": "scorpions-event1",
+    "date": "date1",
+    "artistName": "scorpions",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "rock"
+}
+
+###user2 creates event:scorpions-event2
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: 556d40507ec9ce3ec0e9aed5fab98cb06293a6ed
+refresh_token: nanananana
+
+{
+    "title": "scorpions-event2",
+    "date": "date2",
+    "artistName": "scorpions",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "rock"
+}
+
+###user2 creates event:sco-event3-rpions
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: 556d40507ec9ce3ec0e9aed5fab98cb06293a6ed
+refresh_token: nanananana
+
+{
+    "title": "sco-event3-rpions",
+    "date": "date3",
+    "artistName": "scorpions",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "rock"
+}
+
+###user3 will subscribe to scorpions-event2,metallica-event1###login as user2
+###login as user3
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email3@gmail.com","password":"password123"}
+
+###add concert to subscriptions scorpions-event2
+PUT http://localhost:5000/api/user/concert-to-subscriptions/61c73b15a519dd5fd9781afa
+access_token: cf28aa5205586f29bd12cb2f9cc20780f4f856a2
+refresh_token: nanananana
+
+###add concert to subscriptions metallica-event1
+PUT http://localhost:5000/api/user/concert-to-subscriptions/61c73a69a519dd5fd9781ad0
+access_token: cf28aa5205586f29bd12cb2f9cc20780f4f856a2
+refresh_token: nanananana
+
+###login as user1
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email1@gmail.com","password":"password123"}
+
+###add concert to subscriptions scorpions-event2
+PUT http://localhost:5000/api/user/concert-to-subscriptions/61c73b15a519dd5fd9781afa
+access_token: 631cfc03dd9f61022fd56d4d713794dfefaab55e
+refresh_token: nanananana
+
+###login as user2
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email2@gmail.com","password":"password123"}
+
+###change scorpion event
+PUT http://localhost:5000/api/events/61c73b15a519dd5fd9781afa
+Content-Type: application/json
+access_token: cf97c4e52f68143f61daae0d111d37f46798b3ec
+refresh_token: nanananana
+
+{
+    "title": "titlexxx",
+    "date": "datexxx",
+    "soldOut":true,
+    "startTickets":"1/08/2022",
+    "stopTickets":"10/08/2022"
+}

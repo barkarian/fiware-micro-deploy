@@ -1,0 +1,47 @@
+###login a user
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email123@gmail.com","password":"password123"}
+
+###delete one event
+DELETE http://localhost:5000/api/events/61c0bf741caed9a6818fffd3
+Content-Type: application/json
+access_token: ea11cad6b2fd0d7056048fc303a387d465b27594
+refresh_token: nanananana
+
+###modify one event
+PUT http://localhost:5000/api/events/61c0ca48046ffefb6c735550
+Content-Type: application/json
+access_token: ea11cad6b2fd0d7056048fc303a387d465b27594
+refresh_token: nanananana
+
+{
+    "title": "titlexxx",
+    "date": "datexxx",
+    "soldOut":false,
+    "startTickets":"14/08/2022",
+    "stopTickets":"12/08/2022"
+}
+###create one event
+POST http://localhost:5000/api/events/create
+Content-Type: application/json
+access_token: ea11cad6b2fd0d7056048fc303a387d465b27594
+refresh_token: nanananana
+
+{
+    "title": "title1",
+    "date": "date1",
+    "artistName": "artistName1",
+    "startTickets":"4/08/2022",
+    "stopTickets":"10/08/2022",
+    "soldOut":false,
+    "category": "category1"
+}
+
+
+###get all orion entities **
+GET http://localhost:1026/v2/entities?options=keyValues
+
+###get subscriptions
+GET http://localhost:1026/v2/subscriptions

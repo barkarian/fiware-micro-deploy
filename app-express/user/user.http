@@ -1,0 +1,52 @@
+###login as user2
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{"email":"email2@gmail.com","password":"password"}
+
+
+###query1
+GET http://localhost:5000/api/user/concerts?title=scor&category=rock
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+###query2
+GET http://localhost:5000/api/user/concerts?title=scor&category=metal
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+
+###query3
+GET http://localhost:5000/api/user/concerts?title=event&date=date1
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+###find by ids
+POST http://localhost:5000/api/user/concerts-by-ids
+Content-Type: application/json
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+[
+    {"_id":"61c9e4abb92fdf67ba37f73a"}
+]
+
+###add concert to favorites
+PUT http://localhost:5000/api/user/concert-to-favorites/id12345
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+###delete concert from favorites
+DELETE http://localhost:5000/api/user/concert-from-favorites/id1234
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+###add concert to subscriptions
+PUT http://localhost:5000/api/user/concert-to-subscriptions/id41242
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana
+
+###delete concert from subscriptions
+DELETE http://localhost:5000/api/user/concert-from-subscriptions/idOfEvent_scorpions_event2
+access_token: 5d5b1426e070d649de50d6d0ffedc76721d5bac8
+refresh_token: nanananana

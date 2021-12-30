@@ -1,0 +1,38 @@
+### Create super admin token
+POST http://localhost:5001/v1/auth/tokens
+Content-Type: application/json
+
+{
+  "name":"admin@test.com",
+  "password": "1234"
+}
+### Create a user
+POST http://localhost:5001/v1/users
+Content-Type: application/json
+X-Auth-token: 8f9dc701-a09f-4a1c-8956-cfe1be52ffe6
+
+{
+  "user":{
+    "username":"theo",
+    "email":"theo1@test.com",
+    "password":"test"
+  }
+}
+### Get user from username
+POST http://localhost:5001/oauth2/token
+Host: account.lab.fiware.org
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YjEyYzljYWMtNGJjYi00MmM0LWJhYzgtZjllNjBmYTRiZjE3OjY5YTZlNTcxLWMzM2EtNDY2NC04MmJhLWRmMDFmNzU3NjM5NQ==
+
+grant_type=password&username=theo@test.com&password=test
+
+### Refresh you token
+POST http://localhost:5001/oauth2/token
+Host: account.lab.fiware.org
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic YjEyYzljYWMtNGJjYi00MmM0LWJhYzgtZjllNjBmYTRiZjE3OjY5YTZlNTcxLWMzM2EtNDY2NC04MmJhLWRmMDFmNzU3NjM5NQ==
+
+grant_type=refresh_token&refresh_token=7e5d906200fc5fefe99e548c4505f1dddbad439d
+
+### Get data and validate your access_token
+GET http://localhost:5001/user?access_token=f70863427d11ec3ee1615f86079632e9dd262a84
