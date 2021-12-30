@@ -11,7 +11,6 @@
         // Content-Type: application/json
 
         // {"email":"email1@gmail.com","password":"password123"}
-        console.log(API_URL)
         try {
             const response=await fetch("http://34.118.86.60:5000/auth/login",{
                 method:"POST",
