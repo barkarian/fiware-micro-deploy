@@ -6698,7 +6698,7 @@ var init_ssr = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/store-269bc4ce.js
+// .svelte-kit/output/server/chunks/store-f8e86d2f.js
 function writable2(value, start = noop3) {
   let stop;
   const subscribers = new Set();
@@ -6741,10 +6741,10 @@ function writable2(value, start = noop3) {
   return { set, update, subscribe: subscribe2 };
 }
 var subscriber_queue2, user, access_token, refresh_token, roleAdmin, roleUser, roleEventOrganizer, viewEvent, unseenNotifications;
-var init_store_269bc4ce = __esm({
-  ".svelte-kit/output/server/chunks/store-269bc4ce.js"() {
+var init_store_f8e86d2f = __esm({
+  ".svelte-kit/output/server/chunks/store-f8e86d2f.js"() {
     init_shims();
-    init_app_0d736592();
+    init_app_081ab2eb();
     subscriber_queue2 = [];
     user = writable2({});
     access_token = writable2(null);
@@ -6757,17 +6757,17 @@ var init_store_269bc4ce = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-53f769d3.js
-var layout_53f769d3_exports = {};
-__export(layout_53f769d3_exports, {
+// .svelte-kit/output/server/chunks/__layout-7eb76f1c.js
+var layout_7eb76f1c_exports = {};
+__export(layout_7eb76f1c_exports, {
   default: () => _layout
 });
 var getStores, page, logo, css$1, Header, css, _layout;
-var init_layout_53f769d3 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-53f769d3.js"() {
+var init_layout_7eb76f1c = __esm({
+  ".svelte-kit/output/server/chunks/__layout-7eb76f1c.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     getStores = () => {
       const stores = getContext("__svelte__");
@@ -6857,9 +6857,9 @@ var init_layout_53f769d3 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/error-6ad1531e.js
-var error_6ad1531e_exports = {};
-__export(error_6ad1531e_exports, {
+// .svelte-kit/output/server/chunks/error-b3440131.js
+var error_b3440131_exports = {};
+__export(error_b3440131_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -6867,10 +6867,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
-var init_error_6ad1531e = __esm({
-  ".svelte-kit/output/server/chunks/error-6ad1531e.js"() {
+var init_error_b3440131 = __esm({
+  ".svelte-kit/output/server/chunks/error-b3440131.js"() {
     init_shims();
-    init_app_0d736592();
+    init_app_081ab2eb();
     init_ssr();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
@@ -6891,16 +6891,16 @@ ${error2.stack ? `<pre>${escape2(error2.stack)}</pre>` : ``}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/index-62da350f.js
-var index_62da350f_exports = {};
-__export(index_62da350f_exports, {
+// .svelte-kit/output/server/chunks/index-2909d7f9.js
+var index_2909d7f9_exports = {};
+__export(index_2909d7f9_exports, {
   default: () => Routes
 });
 var Routes;
-var init_index_62da350f = __esm({
-  ".svelte-kit/output/server/chunks/index-62da350f.js"() {
+var init_index_2909d7f9 = __esm({
+  ".svelte-kit/output/server/chunks/index-2909d7f9.js"() {
     init_shims();
-    init_app_0d736592();
+    init_app_081ab2eb();
     init_ssr();
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<h1>Welcome to Concert app</h1>
@@ -6909,13 +6909,13 @@ var init_index_62da350f = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/DisplayEvents-f4520e83.js
+// .svelte-kit/output/server/chunks/DisplayEvents-3cad749a.js
 var EventElementOrganizer, EventElementUser, DisplayEvents;
-var init_DisplayEvents_f4520e83 = __esm({
-  ".svelte-kit/output/server/chunks/DisplayEvents-f4520e83.js"() {
+var init_DisplayEvents_3cad749a = __esm({
+  ".svelte-kit/output/server/chunks/DisplayEvents-3cad749a.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     EventElementOrganizer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { event = null } = $$props;
       if ($$props.event === void 0 && $$bindings.event && event !== void 0)
@@ -6953,9 +6953,9 @@ var init_DisplayEvents_f4520e83 = __esm({
       const getEvents = async () => {
         try {
           console.log({
-            queryUrl_Is: `http://localhost:5000/api/user/concerts${query ? "?" + query : ""}`
+            queryUrl_Is: `http://34.118.86.60:5000/api/user/concerts${query ? "?" + query : ""}`
           });
-          const response = await fetch(`http://localhost:5000/api/user/concerts${query ? "?" + query : ""}`, {
+          const response = await fetch(`http://34.118.86.60:5000/api/user/concerts${query ? "?" + query : ""}`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -6998,18 +6998,18 @@ ${events && events.length > 0 ? `${manageEvents ? `${each(events, (event) => `${
   }
 });
 
-// .svelte-kit/output/server/chunks/manage-my-events-348ac6fc.js
-var manage_my_events_348ac6fc_exports = {};
-__export(manage_my_events_348ac6fc_exports, {
+// .svelte-kit/output/server/chunks/manage-my-events-2460f271.js
+var manage_my_events_2460f271_exports = {};
+__export(manage_my_events_2460f271_exports, {
   default: () => Manage_my_events
 });
 var CreateEvent, Manage_my_events;
-var init_manage_my_events_348ac6fc = __esm({
-  ".svelte-kit/output/server/chunks/manage-my-events-348ac6fc.js"() {
+var init_manage_my_events_2460f271 = __esm({
+  ".svelte-kit/output/server/chunks/manage-my-events-2460f271.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
-    init_DisplayEvents_f4520e83();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
+    init_DisplayEvents_3cad749a();
     init_ssr();
     CreateEvent = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_refresh_token;
@@ -7037,17 +7037,17 @@ ${validate_component(DisplayEvents, "DisplayEvents").$$render($$result, { manage
   }
 });
 
-// .svelte-kit/output/server/chunks/notifications-ebc8a2e8.js
-var notifications_ebc8a2e8_exports = {};
-__export(notifications_ebc8a2e8_exports, {
+// .svelte-kit/output/server/chunks/notifications-a23f36cd.js
+var notifications_a23f36cd_exports = {};
+__export(notifications_a23f36cd_exports, {
   default: () => Notifications
 });
 var Notifications;
-var init_notifications_ebc8a2e8 = __esm({
-  ".svelte-kit/output/server/chunks/notifications-ebc8a2e8.js"() {
+var init_notifications_a23f36cd = __esm({
+  ".svelte-kit/output/server/chunks/notifications-a23f36cd.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Notifications = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $unseenNotifications, $$unsubscribe_unseenNotifications;
@@ -7074,17 +7074,17 @@ ${each($user.notifications, (notification) => `<li>${escape2(notification.notifD
   }
 });
 
-// .svelte-kit/output/server/chunks/modify-event-51adcd22.js
-var modify_event_51adcd22_exports = {};
-__export(modify_event_51adcd22_exports, {
+// .svelte-kit/output/server/chunks/modify-event-de35f6bb.js
+var modify_event_de35f6bb_exports = {};
+__export(modify_event_de35f6bb_exports, {
   default: () => Modify_event
 });
 var Modify_event;
-var init_modify_event_51adcd22 = __esm({
-  ".svelte-kit/output/server/chunks/modify-event-51adcd22.js"() {
+var init_modify_event_de35f6bb = __esm({
+  ".svelte-kit/output/server/chunks/modify-event-de35f6bb.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Modify_event = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $viewEvent, $$unsubscribe_viewEvent;
@@ -7118,17 +7118,17 @@ ${event ? `<form><p>title:<input type="${"text"}" name="${"title"}" placeholder=
   }
 });
 
-// .svelte-kit/output/server/chunks/admin-panel-080824f7.js
-var admin_panel_080824f7_exports = {};
-__export(admin_panel_080824f7_exports, {
+// .svelte-kit/output/server/chunks/admin-panel-ef1a12fa.js
+var admin_panel_ef1a12fa_exports = {};
+__export(admin_panel_ef1a12fa_exports, {
   default: () => Admin_panel
 });
 var UserElement, DisplayUsers, Admin_panel;
-var init_admin_panel_080824f7 = __esm({
-  ".svelte-kit/output/server/chunks/admin-panel-080824f7.js"() {
+var init_admin_panel_ef1a12fa = __esm({
+  ".svelte-kit/output/server/chunks/admin-panel-ef1a12fa.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     UserElement = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_refresh_token;
@@ -7177,17 +7177,17 @@ ${user2 ? `<li>user:${escape2(user2.email)}:
   }
 });
 
-// .svelte-kit/output/server/chunks/subscribed-1ea373b0.js
-var subscribed_1ea373b0_exports = {};
-__export(subscribed_1ea373b0_exports, {
+// .svelte-kit/output/server/chunks/subscribed-600a0233.js
+var subscribed_600a0233_exports = {};
+__export(subscribed_600a0233_exports, {
   default: () => Subscribed
 });
 var Subscribed;
-var init_subscribed_1ea373b0 = __esm({
-  ".svelte-kit/output/server/chunks/subscribed-1ea373b0.js"() {
+var init_subscribed_600a0233 = __esm({
+  ".svelte-kit/output/server/chunks/subscribed-600a0233.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Subscribed = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_user;
@@ -7204,17 +7204,17 @@ var init_subscribed_1ea373b0 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/favorites-e8ed03dd.js
-var favorites_e8ed03dd_exports = {};
-__export(favorites_e8ed03dd_exports, {
+// .svelte-kit/output/server/chunks/favorites-ecde280d.js
+var favorites_ecde280d_exports = {};
+__export(favorites_ecde280d_exports, {
   default: () => Favorites
 });
 var Favorites;
-var init_favorites_e8ed03dd = __esm({
-  ".svelte-kit/output/server/chunks/favorites-e8ed03dd.js"() {
+var init_favorites_ecde280d = __esm({
+  ".svelte-kit/output/server/chunks/favorites-ecde280d.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Favorites = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_user;
@@ -7231,19 +7231,19 @@ var init_favorites_e8ed03dd = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/concerts-dd032a30.js
-var concerts_dd032a30_exports = {};
-__export(concerts_dd032a30_exports, {
+// .svelte-kit/output/server/chunks/concerts-01b44d65.js
+var concerts_01b44d65_exports = {};
+__export(concerts_01b44d65_exports, {
   default: () => Concerts
 });
 var Concerts;
-var init_concerts_dd032a30 = __esm({
-  ".svelte-kit/output/server/chunks/concerts-dd032a30.js"() {
+var init_concerts_01b44d65 = __esm({
+  ".svelte-kit/output/server/chunks/concerts-01b44d65.js"() {
     init_shims();
-    init_app_0d736592();
-    init_DisplayEvents_f4520e83();
+    init_app_081ab2eb();
+    init_DisplayEvents_3cad749a();
     init_ssr();
-    init_store_269bc4ce();
+    init_store_f8e86d2f();
     Concerts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let title;
       let artistName;
@@ -7264,17 +7264,17 @@ ${validate_component(DisplayEvents, "DisplayEvents").$$render($$result, { concer
   }
 });
 
-// .svelte-kit/output/server/chunks/profile-f6860f80.js
-var profile_f6860f80_exports = {};
-__export(profile_f6860f80_exports, {
+// .svelte-kit/output/server/chunks/profile-76cdc386.js
+var profile_76cdc386_exports = {};
+__export(profile_76cdc386_exports, {
   default: () => Profile
 });
 var Profile;
-var init_profile_f6860f80 = __esm({
-  ".svelte-kit/output/server/chunks/profile-f6860f80.js"() {
+var init_profile_76cdc386 = __esm({
+  ".svelte-kit/output/server/chunks/profile-76cdc386.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Profile = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $user, $$unsubscribe_user;
@@ -7309,16 +7309,16 @@ var init_profile_f6860f80 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/sign-in-5a96cfbb.js
-var sign_in_5a96cfbb_exports = {};
-__export(sign_in_5a96cfbb_exports, {
+// .svelte-kit/output/server/chunks/sign-in-b3048424.js
+var sign_in_b3048424_exports = {};
+__export(sign_in_b3048424_exports, {
   default: () => Sign_in
 });
 var Sign_in;
-var init_sign_in_5a96cfbb = __esm({
-  ".svelte-kit/output/server/chunks/sign-in-5a96cfbb.js"() {
+var init_sign_in_b3048424 = __esm({
+  ".svelte-kit/output/server/chunks/sign-in-b3048424.js"() {
     init_shims();
-    init_app_0d736592();
+    init_app_081ab2eb();
     init_ssr();
     Sign_in = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let userCredentials = { password: "", email: "" };
@@ -7330,16 +7330,16 @@ var init_sign_in_5a96cfbb = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/sign-up-e0b90199.js
-var sign_up_e0b90199_exports = {};
-__export(sign_up_e0b90199_exports, {
+// .svelte-kit/output/server/chunks/sign-up-68ac6529.js
+var sign_up_68ac6529_exports = {};
+__export(sign_up_68ac6529_exports, {
   default: () => Sign_up
 });
 var Sign_up;
-var init_sign_up_e0b90199 = __esm({
-  ".svelte-kit/output/server/chunks/sign-up-e0b90199.js"() {
+var init_sign_up_68ac6529 = __esm({
+  ".svelte-kit/output/server/chunks/sign-up-68ac6529.js"() {
     init_shims();
-    init_app_0d736592();
+    init_app_081ab2eb();
     init_ssr();
     Sign_up = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let userCredentials = {};
@@ -7354,17 +7354,17 @@ var init_sign_up_e0b90199 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/event-e2cea5c2.js
-var event_e2cea5c2_exports = {};
-__export(event_e2cea5c2_exports, {
+// .svelte-kit/output/server/chunks/event-0b95f0b8.js
+var event_0b95f0b8_exports = {};
+__export(event_0b95f0b8_exports, {
   default: () => Event
 });
 var Event;
-var init_event_e2cea5c2 = __esm({
-  ".svelte-kit/output/server/chunks/event-e2cea5c2.js"() {
+var init_event_0b95f0b8 = __esm({
+  ".svelte-kit/output/server/chunks/event-0b95f0b8.js"() {
     init_shims();
-    init_app_0d736592();
-    init_store_269bc4ce();
+    init_app_081ab2eb();
+    init_store_f8e86d2f();
     init_ssr();
     Event = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $$unsubscribe_user;
@@ -7401,7 +7401,7 @@ ${$viewEvent.soldOut == true ? `<p>\u274CTickets are Sold Out</p>` : `<p>\u2611W
   }
 });
 
-// .svelte-kit/output/server/chunks/app-0d736592.js
+// .svelte-kit/output/server/chunks/app-081ab2eb.js
 function noop3() {
 }
 function run(fn) {
@@ -7513,9 +7513,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-a5d34c49.js",
+      file: assets + "/_app/start-2dcdcc86.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-a5d34c49.js", assets + "/_app/chunks/vendor-b7a51d2f.js", assets + "/_app/chunks/singletons-12a22614.js"]
+      js: [assets + "/_app/start-2dcdcc86.js", assets + "/_app/chunks/vendor-b7a51d2f.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -7559,8 +7559,8 @@ function render(request, {
   return respond(__spreadProps(__spreadValues({}, request), { host }), options, { prerender });
 }
 var current_component, escaped2, missing_component, on_destroy, css2, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_0d736592 = __esm({
-  ".svelte-kit/output/server/chunks/app-0d736592.js"() {
+var init_app_081ab2eb = __esm({
+  ".svelte-kit/output/server/chunks/app-081ab2eb.js"() {
     init_shims();
     init_ssr();
     Promise.resolve();
@@ -7722,22 +7722,22 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_53f769d3(), layout_53f769d3_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_6ad1531e(), error_6ad1531e_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_62da350f(), index_62da350f_exports)),
-      "src/routes/manage-my-events.svelte": () => Promise.resolve().then(() => (init_manage_my_events_348ac6fc(), manage_my_events_348ac6fc_exports)),
-      "src/routes/notifications.svelte": () => Promise.resolve().then(() => (init_notifications_ebc8a2e8(), notifications_ebc8a2e8_exports)),
-      "src/routes/modify-event.svelte": () => Promise.resolve().then(() => (init_modify_event_51adcd22(), modify_event_51adcd22_exports)),
-      "src/routes/admin-panel.svelte": () => Promise.resolve().then(() => (init_admin_panel_080824f7(), admin_panel_080824f7_exports)),
-      "src/routes/subscribed.svelte": () => Promise.resolve().then(() => (init_subscribed_1ea373b0(), subscribed_1ea373b0_exports)),
-      "src/routes/favorites.svelte": () => Promise.resolve().then(() => (init_favorites_e8ed03dd(), favorites_e8ed03dd_exports)),
-      "src/routes/concerts.svelte": () => Promise.resolve().then(() => (init_concerts_dd032a30(), concerts_dd032a30_exports)),
-      "src/routes/profile.svelte": () => Promise.resolve().then(() => (init_profile_f6860f80(), profile_f6860f80_exports)),
-      "src/routes/sign-in.svelte": () => Promise.resolve().then(() => (init_sign_in_5a96cfbb(), sign_in_5a96cfbb_exports)),
-      "src/routes/sign-up.svelte": () => Promise.resolve().then(() => (init_sign_up_e0b90199(), sign_up_e0b90199_exports)),
-      "src/routes/event.svelte": () => Promise.resolve().then(() => (init_event_e2cea5c2(), event_e2cea5c2_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_7eb76f1c(), layout_7eb76f1c_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_b3440131(), error_b3440131_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_2909d7f9(), index_2909d7f9_exports)),
+      "src/routes/manage-my-events.svelte": () => Promise.resolve().then(() => (init_manage_my_events_2460f271(), manage_my_events_2460f271_exports)),
+      "src/routes/notifications.svelte": () => Promise.resolve().then(() => (init_notifications_a23f36cd(), notifications_a23f36cd_exports)),
+      "src/routes/modify-event.svelte": () => Promise.resolve().then(() => (init_modify_event_de35f6bb(), modify_event_de35f6bb_exports)),
+      "src/routes/admin-panel.svelte": () => Promise.resolve().then(() => (init_admin_panel_ef1a12fa(), admin_panel_ef1a12fa_exports)),
+      "src/routes/subscribed.svelte": () => Promise.resolve().then(() => (init_subscribed_600a0233(), subscribed_600a0233_exports)),
+      "src/routes/favorites.svelte": () => Promise.resolve().then(() => (init_favorites_ecde280d(), favorites_ecde280d_exports)),
+      "src/routes/concerts.svelte": () => Promise.resolve().then(() => (init_concerts_01b44d65(), concerts_01b44d65_exports)),
+      "src/routes/profile.svelte": () => Promise.resolve().then(() => (init_profile_76cdc386(), profile_76cdc386_exports)),
+      "src/routes/sign-in.svelte": () => Promise.resolve().then(() => (init_sign_in_b3048424(), sign_in_b3048424_exports)),
+      "src/routes/sign-up.svelte": () => Promise.resolve().then(() => (init_sign_up_68ac6529(), sign_up_68ac6529_exports)),
+      "src/routes/event.svelte": () => Promise.resolve().then(() => (init_event_0b95f0b8(), event_0b95f0b8_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-39881b52.js", "css": ["assets/pages/__layout.svelte-b4423a57.css"], "js": ["pages/__layout.svelte-39881b52.js", "chunks/vendor-b7a51d2f.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/store-b1b2bb32.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-01d2a1a7.js", "css": [], "js": ["error.svelte-01d2a1a7.js", "chunks/vendor-b7a51d2f.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-2c1044ef.js", "css": [], "js": ["pages/index.svelte-2c1044ef.js", "chunks/vendor-b7a51d2f.js"], "styles": [] }, "src/routes/manage-my-events.svelte": { "entry": "pages/manage-my-events.svelte-58b95483.js", "css": [], "js": ["pages/manage-my-events.svelte-58b95483.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/DisplayEvents-06f5104f.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/notifications.svelte": { "entry": "pages/notifications.svelte-17f1a856.js", "css": [], "js": ["pages/notifications.svelte-17f1a856.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/modify-event.svelte": { "entry": "pages/modify-event.svelte-c75bd83b.js", "css": [], "js": ["pages/modify-event.svelte-c75bd83b.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/admin-panel.svelte": { "entry": "pages/admin-panel.svelte-a3166c5f.js", "css": [], "js": ["pages/admin-panel.svelte-a3166c5f.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/subscribed.svelte": { "entry": "pages/subscribed.svelte-1f4ffe9a.js", "css": [], "js": ["pages/subscribed.svelte-1f4ffe9a.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/favorites.svelte": { "entry": "pages/favorites.svelte-80c8184c.js", "css": [], "js": ["pages/favorites.svelte-80c8184c.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/concerts.svelte": { "entry": "pages/concerts.svelte-6b974989.js", "css": [], "js": ["pages/concerts.svelte-6b974989.js", "chunks/vendor-b7a51d2f.js", "chunks/DisplayEvents-06f5104f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/profile.svelte": { "entry": "pages/profile.svelte-69931d7d.js", "css": [], "js": ["pages/profile.svelte-69931d7d.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/sign-in.svelte": { "entry": "pages/sign-in.svelte-55410ef5.js", "css": [], "js": ["pages/sign-in.svelte-55410ef5.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/sign-up.svelte": { "entry": "pages/sign-up.svelte-c2c91283.js", "css": [], "js": ["pages/sign-up.svelte-c2c91283.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/event.svelte": { "entry": "pages/event.svelte-0f102694.js", "css": [], "js": ["pages/event.svelte-0f102694.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-0f39ee83.js", "css": ["assets/pages/__layout.svelte-b4423a57.css"], "js": ["pages/__layout.svelte-0f39ee83.js", "chunks/vendor-b7a51d2f.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js", "chunks/store-b1b2bb32.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-01d2a1a7.js", "css": [], "js": ["error.svelte-01d2a1a7.js", "chunks/vendor-b7a51d2f.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-2c1044ef.js", "css": [], "js": ["pages/index.svelte-2c1044ef.js", "chunks/vendor-b7a51d2f.js"], "styles": [] }, "src/routes/manage-my-events.svelte": { "entry": "pages/manage-my-events.svelte-a5be8df8.js", "css": [], "js": ["pages/manage-my-events.svelte-a5be8df8.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/DisplayEvents-b831781b.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/notifications.svelte": { "entry": "pages/notifications.svelte-17f1a856.js", "css": [], "js": ["pages/notifications.svelte-17f1a856.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/modify-event.svelte": { "entry": "pages/modify-event.svelte-8444c6a0.js", "css": [], "js": ["pages/modify-event.svelte-8444c6a0.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/admin-panel.svelte": { "entry": "pages/admin-panel.svelte-46c8dd6b.js", "css": [], "js": ["pages/admin-panel.svelte-46c8dd6b.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/subscribed.svelte": { "entry": "pages/subscribed.svelte-f66d3fff.js", "css": [], "js": ["pages/subscribed.svelte-f66d3fff.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/favorites.svelte": { "entry": "pages/favorites.svelte-a044f541.js", "css": [], "js": ["pages/favorites.svelte-a044f541.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/concerts.svelte": { "entry": "pages/concerts.svelte-37803700.js", "css": [], "js": ["pages/concerts.svelte-37803700.js", "chunks/vendor-b7a51d2f.js", "chunks/DisplayEvents-b831781b.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/profile.svelte": { "entry": "pages/profile.svelte-69931d7d.js", "css": [], "js": ["pages/profile.svelte-69931d7d.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] }, "src/routes/sign-in.svelte": { "entry": "pages/sign-in.svelte-d5a8da50.js", "css": [], "js": ["pages/sign-in.svelte-d5a8da50.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/sign-up.svelte": { "entry": "pages/sign-up.svelte-59e1984d.js", "css": [], "js": ["pages/sign-up.svelte-59e1984d.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/event.svelte": { "entry": "pages/event.svelte-c9f874b2.js", "css": [], "js": ["pages/event.svelte-c9f874b2.js", "chunks/vendor-b7a51d2f.js", "chunks/store-b1b2bb32.js"], "styles": [] } };
   }
 });
 
@@ -7747,7 +7747,7 @@ init_shims();
 // .svelte-kit/output/server/app.js
 init_shims();
 init_ssr();
-init_app_0d736592();
+init_app_081ab2eb();
 
 // .svelte-kit/node/middlewares.js
 import {
